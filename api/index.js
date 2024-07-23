@@ -22,5 +22,15 @@ console.log("server in runing on port 3000")
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter)
 
+// middleware
+app.use((err,req,res,next)=>{
+    const statusCode=err.statusCode || 500;
+    const message =err.message || "Internal Server Error"
+    return res.status(statusCode).json({
+        success:false,
+        statusCode,
+        message,
+    });
+})
 
 // mongodb+srv://waqas:waqas2021-ag-5936s kp@mern-estate.b2ukjdf.mongodb.net/?retryWrites=true&w=majority&appName=mern-estate
