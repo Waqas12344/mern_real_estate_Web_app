@@ -8,6 +8,8 @@ import { getDownloadURL,
   import {updateUserSuccess,updateUserFailure,updateUserStart,deleteUserFailure,deleteUserStart,deleteUserSuccess, signOutUserStart} from '../redux/user/userSlice.js';
   import { useDispatch } from 'react-redux';
 
+import {Link} from 'react-router-dom';
+
 import {app} from '../firebase'
 const Profile = () => {
   const fileRef =useRef(null)
@@ -144,6 +146,9 @@ handleFileUpload(file);
 <button disabled={loading}  className='bg-slate-700 rounded-lg p-3 text-white uppercase hover:opacity-95 disabled:opacity-80% '>{
 loading ? 'loading...' : 'update'
 }</button>
+<Link className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={'/create-listing'}>
+create listing
+</Link>
       </form>  
       <div className='flex justify-between mt-5s'>
         <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer '>Delete Account</span>
