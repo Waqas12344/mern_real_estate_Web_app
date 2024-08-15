@@ -209,7 +209,9 @@ userListings.map((listing)=><div key={listing._id} className='border rounded-lg 
 <p className='text-slate-700 font-semibold'>{listing.name}</p></Link>
 <div className=" flex flex-col items-center ">
   <button onClick={()=>handleListingDelete(listing._id)} className='text-red-700 uppercase'>Delete</button>
-  <button className='text-green-700 uppercase'>Edit</button>
+<Link to={`/update-listing/${listing._id}`}>
+<button className='text-green-700 uppercase'>Edit</button>
+</Link>
 </div>
   </div>) }
 </div>  
