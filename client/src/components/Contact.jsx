@@ -17,7 +17,6 @@ const Contact = ({listing}) => {
     },[listing.userRef]);
 
     const onChange=(e)=>{
-        // e.preventdefault();
         setMessage(e.target.value)
 
     }
