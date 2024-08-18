@@ -6,6 +6,7 @@ const Search = () => {
         <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen ">
             <form className='flex flex-col gap-8' >
                 <div className=" flex items-center gap-2">
+                    
                     <label className='whitespace-nowrap font-semibold' >Search Term:</label>
                     <input type="text" placeholder='Search ...'
                     id='searchTerm'
