@@ -123,6 +123,7 @@ export default function CreateListing() {
     }
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
